@@ -1,54 +1,63 @@
-.container {
+* {
+  font-family: helvetica;
+}
+
+.centerColumn {
   display: flex;
   justify-content: center;
 }
 
+.container {
+  display: flex;
+
+  flex-direction: column;
+}
+
 .card {
-  width: auto;
+  width: 600px;
   border: 1px solid blue;
 }
 
-.header {
+.bar {
   background-color: lightblue;
-  color: white;
+  padding: 16px;
   font-size: 2rem;
-  width: 400px;
-  padding: 1rem 1rem;
-  height: auto;
+  margin: 0;
+  color: white;
 }
+
 .body {
-  overflow: auto;
-  max-height: 120px;
-  width: 400px;
-
-  margin: 10px;
+  /* padding: 1rem; */
+  margin: 0;
+  max-height: 0px;
+  /* transition: max-height 0.1s;
+  transition: margin 1s; */
+  overflow: hidden;
 }
 
-.bodyCollapse {
-  animation: collapse 1s;
-}
 .bodyExpand {
-  animation: collapse 1s;
-}
-
-@keyframes collapse {
-  from {
-    max-height: 120px;
-  }
-  to {
-    max-height: 0px;
-  }
+  animation: expand 1s;
+  animation-fill-mode: forwards;
 }
 
 @keyframes expand {
   from {
     max-height: 0px;
+    margin: 0;
   }
   to {
     max-height: 120px;
+    margin: 1rem;
   }
 }
 
-.test {
-  background-color: red;
+@keyframes collapse {
+  from {
+    max-height: 120px;
+    margin: 1rem;
+  }
+  to {
+    max-height: 0;
+    margin: 0;
+  }
 }
