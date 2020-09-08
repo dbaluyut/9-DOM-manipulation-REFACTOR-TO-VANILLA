@@ -15,11 +15,11 @@
 
 .card {
   width: 600px;
-  border: 1px solid blue;
+  border: 1px solid #37b6c3;
 }
 
 .bar {
-  background-color: lightblue;
+  background-color: #19bbcc;
   padding: 16px;
   font-size: 2rem;
   margin: 0;
@@ -37,6 +37,11 @@
 
 .bodyExpand {
   animation: expand 1s;
+  animation-fill-mode: forwards;
+}
+
+.bodyCollapse {
+  animation: collapse 1s;
   animation-fill-mode: forwards;
 }
 
@@ -60,4 +65,7 @@
     max-height: 0;
     margin: 0;
   }
+}
+.bar:hover {
+  background-color: #1ad3e7;
 }

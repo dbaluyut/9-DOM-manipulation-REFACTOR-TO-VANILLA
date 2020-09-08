@@ -1,19 +1,10 @@
-// const s1h = document.querySelector("#s1")
-
-// function collapseClick(e) {
-//   e.target.classList.toggle("bodyCollapse")
-//   // e.target.classList.toggle("bodyExpand")
-// }
-
-// s1.addEventListener("click", collapseClick)
-
 // document.querySelector("#container").addEventListener("click", function (e) {
 //   const isBar = e.target.className.includes("bar")
 
 //   // if i click on bar, expand 1, collapse 2, and 3
 //   if (isBar) {
 //     const selection = "#" + e.target.id + "-b"
-//     document.querySelector(selection).classList.toggle("bodyCollapse")
+//     document.querySelector(selection).classList.toggle("bodyExpand")
 //   } else {
 //   }
 // })
@@ -30,6 +21,7 @@
 
 function showTextOne() {
   document.querySelector("#s1-b").classList.toggle("bodyExpand")
+
   document.querySelector("#s2-b").classList.remove("bodyExpand")
   document.querySelector("#s3-b").classList.remove("bodyExpand")
 }
